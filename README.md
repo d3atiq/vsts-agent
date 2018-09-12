@@ -25,7 +25,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: server
       vars:
-        vsts:
+        vstsagent:
           version: 2.140.0
       roles:
          - role: d3atiq.vsts_agent
