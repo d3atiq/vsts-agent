@@ -19,9 +19,11 @@
 - name: Download and unpack VSTS agent
   become: true
   unarchive:
+    remote_src: yes
     src: "https://vstsagentpackage.azureedge.net/agent/{{ vstsagent.version }}/vsts-agent-linux-x64-{{ vstsagent.version }}.tar.gz"
     dest: /opt/vsts
-    remote_src: yes
+    owner: vsts
+    group: vsts
 
 - name: Install git apt package
   become: true
