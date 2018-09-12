@@ -8,6 +8,7 @@
     home: /opt/vsts
 
 - name: Create VSTS agent work folder
+  become: true
   file:
     path: /var/vsts
     state: directory
