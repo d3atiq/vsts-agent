@@ -1,0 +1,18 @@
+---
+# tasks file for vsts-agent
+
+- name: Download and unpack VSTS agent
+  become: true
+  unarchive:
+    src: "https://vstsagentpackage.azureedge.net/agent/{{ vsts-agent.version }}/vsts-agent-linux-x64-{{ vsts-agent.version }}.tar.gz"
+    dest: /opt/vsts
+    remote_src: yes
+
+- name: Install git apt package
+  become: true
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - git
+
