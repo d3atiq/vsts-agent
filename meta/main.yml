@@ -1,6 +1,6 @@
 galaxy_info:
   author: Douglas Atique
-  description: An Ansible role to install Microsoft VSTS agent on Ubuntu server. 
+  description: An Ansible role to install Microsoft VSTS agent on Ubuntu server.
   license: MIT
   min_ansible_version: 2.5
   platforms:
